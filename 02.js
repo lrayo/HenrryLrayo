@@ -12,6 +12,18 @@ function stringMasLarga(strings) {
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
 
   // Tu código aca
+  let stringlargo = [];
+  for (const x of strings) {
+    stringlargo.push(x.length);
+  }
+  
+  let max = Math.max.apply(null, stringlargo)
+  
+  for (let palabra of strings) {
+    if (palabra.length === max) {
+      return palabra;
+    }
+  }
 }
 
 // No modifiques nada debajo de esta linea //
